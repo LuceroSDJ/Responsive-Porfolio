@@ -1,0 +1,251 @@
+
+
+/***************** CSS FOR index.html, portfolio. html & contact.html ******************/
+
+/** Header must be position: fixed & z-index:1 so it stays at the very top and on top of the other elements **/
+header {
+    background-color: #ffffff;
+    position: fixed;
+    margin: 0 auto;
+    float: left;
+    width: 100%;
+    z-index: 1;
+    top: 0;      
+}
+
+nav {
+    float: right;
+}
+
+.headerContent {
+    width: 960px;
+    margin: 0 auto 0 auto; /** this attribute value centers our content **/
+}
+
+.mainLogo {
+    float: left;
+    color: white;
+    margin: 0 auto;
+    padding: 0 20px 0 20px; 
+    background-color: #4aaaa5;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+}
+
+a {
+    text-decoration: none;
+}
+
+ li {
+     float: left;
+     list-style: none;
+     margin-left: 20px;
+     padding-top: 20px;
+     text-align: center;
+ }
+
+ li a:hover {
+     font-size: 25px;
+     color: #4aaaa5;
+     font-weight: bold;
+     font-family: cursive;
+     text-shadow: 4px 7px lightgray;
+ }
+
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    /** I used Eye Dropper tool to match the color from the assignment image **/
+    background-color: #ededed;
+    color: #777777;
+    margin: 0 auto;
+}
+
+.container {
+    height: 900px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 120px;   
+    background-color: #ffffff;
+    padding: 30px 20px 20px 30px;
+    width: 920px;  /** 20+920+20= 960 **/   
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    color: #4aaaa5;
+}
+
+#myPicture {
+    float: left;
+    width: 150px;
+    height: 220px;
+    margin-right: 15px;
+    border-radius: 10px;   
+}
+
+/** we want to add a #4aaaa5 color top-border & padding at the bottom so the copyright sign is not right on the edge of our footer **/
+footer {
+    width: 100%;
+    height: 35px;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-color: #4aaaa5;
+    background-color: #666666;
+
+        
+}
+
+/***************** contact.html *****************/
+.form-control {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 5px 10px gray; 
+}
+
+form .message {
+    height: 40%;
+}
+
+form .submit {
+    width: 25%;
+    color: white;
+    font-size: 20px;
+    margin: 20px 0 35px 0;
+    background-color: #4aaaa5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form .submit:hover {
+    color: #4aaaa5;
+    background-color: purple;    
+}
+
+#link { 
+    color: white;
+}
+
+#link:hover {
+    color: purple;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+    text-shadow: 3px 5px lightgray;
+}
+
+
+/***************** portfolio.html *****************/
+
+.image {   
+    width: 40%;
+    float: left;
+    overflow: auto;
+    position: relative;
+    margin: 20px 40px 20px 0;   
+}
+
+.child {
+    background: #4aaaa5;
+    padding: 5px 0 5px 0;
+    position: absolute;
+    text-align: center;
+    bottom: 15px;
+    width: 100%;  
+}
+
+.section1 {
+    width: 70%;
+}
+.section2 {
+    width: 30%;
+}
+
+/****************MEDIA QUERIES******************/
+/** desktop layout size **/
+@media screen and (max-width: 980px) {
+.container, section, form {
+    width: auto;
+    margin: 10px;
+    float: none;
+    height: auto;
+    margin-top: 50px;
+    /** remains to be completed: in portfolio, my container background does not follow the pictures **/
+
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+header, .headerContent {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+/** tablet screen size **/
+@media screen and (max-width: 768px) {
+.container, section, form {
+    width: auto;
+    margin: 10px;
+    float: none;
+    height: auto;
+}   
+img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+header {
+    width: 100%;
+    height: auto;
+    
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+/** phone in landscape screen size **/
+@media screen and (max-width: 640px) {
+/** make the position of header static **/
+
+
+
+container, section, form {
+    width: auto;
+    margin: 10px;
+    float: none;
+    height: auto;   
+}
+.section1 { 
+    width: 70%;
+}
+.section2 {
+    width: 30%;
+}
+img {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+header, .headerContent {
+    position: static;   
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+}
